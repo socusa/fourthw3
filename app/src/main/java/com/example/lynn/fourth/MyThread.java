@@ -48,7 +48,7 @@ public class MyThread implements Runnable {
         RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams)imageView.getLayoutParams();
 
         while (layoutParams.topMargin < height && keepGoing) {
-            layoutParams.topMargin -= distance;
+            layoutParams.topMargin += distance;
 
             final RelativeLayout.LayoutParams temp = layoutParams;
 
