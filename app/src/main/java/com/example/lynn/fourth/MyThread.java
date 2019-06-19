@@ -50,7 +50,16 @@ public class MyThread implements Runnable {
         while (layoutParams.topMargin < height && keepGoing) {
             layoutParams.topMargin -= distance;
 
-            imageView.setLayoutParams(layoutParams);
+            final RelativeLayout.LayoutParams temp = layoutParams;
+
+            imageView.post(new Runnable() {
+
+                @Override
+                public void run() {
+                    imageView.setLayoutParams(temp);
+                }
+
+            });
 
             pause(delay);
 
