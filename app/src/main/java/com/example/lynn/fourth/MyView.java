@@ -21,24 +21,24 @@ public class MyView extends RelativeLayout {
         width = sizeOfScreen.x;
         height = sizeOfScreen.y;
 
-        int[] drawables = {R.drawable.bear,
-                           R.drawable.bird,
-                           R.drawable.cat,
-                           R.drawable.cow,
-                           R.drawable.eagle,
-                           R.drawable.elephant,
-                           R.drawable.lioness,
-                           R.drawable.llama,
-                           R.drawable.panda,
-                           R.drawable.pig,
-                           R.drawable.rabbit,
-                           R.drawable.rhino,
-                           R.drawable.rooster,
-                           R.drawable.sheep,
-                           R.drawable.snake,
-                           R.drawable.tiger,
-                           R.drawable.turtle,
-                           R.drawable.zebra};
+        drawables = new int[]{R.drawable.bear,
+                              R.drawable.bird,
+                              R.drawable.cat,
+                              R.drawable.cow,
+                              R.drawable.eagle,
+                              R.drawable.elephant,
+                              R.drawable.lioness,
+                              R.drawable.llama,
+                              R.drawable.panda,
+                              R.drawable.pig,
+                              R.drawable.rabbit,
+                              R.drawable.rhino,
+                              R.drawable.rooster,
+                              R.drawable.sheep,
+                              R.drawable.snake,
+                              R.drawable.tiger,
+                              R.drawable.turtle,
+                              R.drawable.zebra};
 
         imageView = new ImageView(context);
 
@@ -46,17 +46,7 @@ public class MyView extends RelativeLayout {
 
         addView(imageView);
 
-        RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(200,200);
-
-        imageView.setLayoutParams(layoutParams);
-
-        imageView.setOnTouchListener(listener);
-
-        MyThread myThread = new MyThread(imageView);
-
         threads = new HashMap<>();
-
-        threads.put(imageView,myThread);
 
 
 
