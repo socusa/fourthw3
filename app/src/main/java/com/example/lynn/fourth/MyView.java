@@ -46,6 +46,10 @@ public class MyView extends RelativeLayout {
 
         addView(imageView);
 
+        RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(200,200);
+
+        imageView.setLayoutParams(layoutParams);
+
         imageView.setOnTouchListener(listener);
 
         MyThread myThread = new MyThread(imageView);
