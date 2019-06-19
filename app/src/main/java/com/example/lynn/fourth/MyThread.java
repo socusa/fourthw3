@@ -20,9 +20,9 @@ public class MyThread implements Runnable {
     }
 
     public void start() {
-        delay -= 0.01;
+        delay -= 0.1;
 
-        distance += 0.01;
+        distance += 0.1;
 
         Thread thread = new Thread(this);
 
