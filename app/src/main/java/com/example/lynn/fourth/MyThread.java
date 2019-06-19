@@ -14,7 +14,7 @@ public class MyThread implements Runnable {
     public MyThread(ImageView imageView) {
         this.imageView = imageView;
 
-        delay = 0.1;
+        delay = 1;
 
         distance = 1;
     }
