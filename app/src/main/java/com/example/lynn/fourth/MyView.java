@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Point;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import androidx.core.content.ContextCompat;
 
@@ -44,6 +45,16 @@ public class MyView extends RelativeLayout {
         threads = new HashMap<>();
 
         addImage = new AddImage();
+
+        message = new TextView(context);
+
+        LayoutParams layoutParams = new LayoutParams(500,200);
+
+        layoutParams.topMargin = 500;
+
+        message.setLayoutParams(layoutParams);
+
+        addView(message);
 
 
 

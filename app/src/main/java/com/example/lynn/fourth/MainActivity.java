@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.os.Bundle;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.Map;
 
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     public static Context context;
     public static int[] drawables;
     public static AddImage addImage;
+    public static TextView message;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

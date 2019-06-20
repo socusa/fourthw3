@@ -27,6 +27,8 @@ public class AddImage implements Runnable {
         final RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(200,200);
 
         for (int counter=0;counter<drawables.length;counter++) {
+            final int temp = counter;
+
             myView.post(new Runnable() {
 
                 @Override
@@ -40,6 +42,8 @@ public class AddImage implements Runnable {
                     MyThread myThread = new MyThread(view);
 
                     threads.put(view,myThread);
+
+                    message.setText(drawables[temp]);
 
                     myView.addView(view);
 
