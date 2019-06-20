@@ -46,7 +46,7 @@ public class MyView extends RelativeLayout {
 
         threads = new HashMap<>();
 
-     //   addImage = new AddImage();
+        addImage = new AddImage();
 
         message = new TextView(context);
 
@@ -72,7 +72,7 @@ public class MyView extends RelativeLayout {
 
         layout.setLayoutParams(layoutParams);
 
-        addView(layout);
+     //   addView(layout);
 
 
 
