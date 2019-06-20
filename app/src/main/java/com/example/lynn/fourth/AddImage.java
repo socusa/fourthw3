@@ -24,7 +24,7 @@ public class AddImage implements Runnable {
 
     @Override
     public void run() {
-        RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(200,200);
+        final RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(200,200);
 
         for (int counter=0;counter<drawables.length;counter++) {
             myView.post(new Runnable() {
@@ -33,7 +33,15 @@ public class AddImage implements Runnable {
                 public void run() {
                     ImageView view = new ImageView(context);
 
-                    view.setLayoutParams()
+                    view.setLayoutParams(layoutParams);
+
+                    view.setOnTouchListener(listener);
+
+                    MyThread myThread = new MyThread(view);
+
+                    threads.put(view,myThread);
+
+                    myView.addView(view);
 
 
                 }
