@@ -53,6 +53,8 @@ public class MyView extends RelativeLayout {
         for (int counter=0;counter<drawables.length;counter++) {
             ImageView view = new ImageView(context);
 
+            view.setImageDrawable(getResources().getDrawable(drawables[counter]));
+
             view.setLayoutParams(layoutParams);
 
             view.setOnTouchListener(listener);
