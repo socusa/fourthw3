@@ -21,11 +21,22 @@ public class AddImage implements Runnable {
         }
     }
 
-
     @Override
     public void run() {
         RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(200,200);
 
+        for (int counter=0;counter<drawables.length;counter++) {
+            myView.post(new Runnable() {
+
+                @Override
+                public void run() {
+
+                }
+
+            });
+
+            pause(5);
+        }
 
     }
 
