@@ -26,6 +26,9 @@ public class AddImage implements Runnable {
     public void run() {
         final RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(200,200);
 
+        layoutParams.leftMargin = 50;
+        layoutParams.topMargin = 200;
+
         for (int counter=0;counter<drawables.length;counter++) {
             final int temp = counter;
 
