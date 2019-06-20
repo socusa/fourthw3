@@ -28,6 +28,8 @@ public class AddImage implements Runnable {
 
         final RelativeLayout layout = new RelativeLayout(context);
 
+        layout.setBackgroundColor(0xFF000000);
+
         myView.post(new Runnable() {
 
             @Override

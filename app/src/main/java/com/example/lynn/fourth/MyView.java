@@ -59,10 +59,16 @@ public class MyView extends RelativeLayout {
 
 
 
+
+
     }
 
     public void add(View view) {
-        addView(view);
+        RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(200,200);
+
+        RelativeLayout layout = new RelativeLayout(context);
+
+        addView(layout);
     }
 
 }
