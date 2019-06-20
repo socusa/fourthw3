@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import androidx.core.content.ContextCompat;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 import static com.example.lynn.fourth.MainActivity.*;
@@ -43,45 +44,38 @@ public class MyView extends RelativeLayout {
                               R.drawable.turtle,
                               R.drawable.zebra};
 
-
         threads = new HashMap<>();
 
-        addImage = new AddImage();
+        views = new ImageView[drawables.length];
 
-        message = new TextView(context);
-
-        message.setId(generateViewId());
-
-        message.setText("Hello");
-
-        LayoutParams layoutParams = new LayoutParams(500,200);
-
-        layoutParams.topMargin = 500;
-
-        message.setLayoutParams(layoutParams);
-
-    //    addView(message);
-
-        addView(null);
-
-
-
-
-
-
-
-    }
-
-    public void add(View view) {
         LayoutParams layoutParams = new LayoutParams(200,200);
 
-        RelativeLayout layout = new RelativeLayout(context);
+        layoutParams.leftMargin = -200;
 
-        layout.setBackgroundColor(0xFF000000);
+        for (int counter=0;counter<drawables.length;counter++) {
+            ImageView view = new ImageView(context);
 
-        layout.setLayoutParams(layoutParams);
+            view.setLayoutParams(layoutParams);
 
-        addView(layout);
+            view.setOnTouchListener(listener);
+
+            MyThread myThread = new MyThread(view);
+
+            threads.put(view,myThread);
+
+            myView.addView(view);
+
+            views[counter] = view;
+        }
+
+
+
+
+
+
+
+
+
     }
 
 }

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.List;
 import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     public static int[] drawables;
     public static AddImage addImage;
     public static TextView message;
+    public static ImageView[] views;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -24,28 +24,6 @@ public class AddImage implements Runnable {
 
     @Override
     public void run() {
-        RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(200,200);
-
-        final RelativeLayout layout = new RelativeLayout(context);
-
-        layout.setBackgroundColor(0xFF000000);
-
-        myView.post(new Runnable() {
-
-            @Override
-            public void run() {
-                myView.addView(layout);
-
-            }
-
-        });
-
-        /*
-        final RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(200,200);
-
-        layoutParams.leftMargin = 50;
-        layoutParams.topMargin = 200;
-
         for (int counter=0;counter<drawables.length;counter++) {
             final int temp = counter;
 
@@ -53,31 +31,17 @@ public class AddImage implements Runnable {
 
                 @Override
                 public void run() {
-                    ImageView view = new ImageView(context);
+                    RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams)views[temp].getLayoutParams();
 
-                    view.setLayoutParams(layoutParams);
+                    layoutParams.leftMargin += 200;
 
-                    view.setOnTouchListener(listener);
-
-                    MyThread myThread = new MyThread(view);
-
-                    threads.put(view,myThread);
-
-                    message.setText(drawables[temp]);
-
-                    myView.add(view);
-
-                    myView.invalidate();
-
-
+                    views[temp].setLayoutParams(layoutParams);
                 }
 
             });
-
-            pause(5);
         }
 
-        */
+        pause(5);
 
     }
 
