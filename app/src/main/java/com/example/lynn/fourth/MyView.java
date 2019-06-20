@@ -60,11 +60,11 @@ public class MyView extends RelativeLayout {
 
         message.setLayoutParams(layoutParams);
 
-        addView(message);
+    //    addView(message);
 
         layoutParams = new LayoutParams(200,200);
 
-        layoutParams.addRule(ABOVE,message.getId());
+    //    layoutParams.addRule(ABOVE,message.getId());
 
         RelativeLayout layout = new RelativeLayout(context);
 
