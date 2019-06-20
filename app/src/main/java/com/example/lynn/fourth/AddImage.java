@@ -24,6 +24,21 @@ public class AddImage implements Runnable {
 
     @Override
     public void run() {
+        RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(200,200);
+
+        final RelativeLayout layout = new RelativeLayout(context);
+
+        myView.post(new Runnable() {
+
+            @Override
+            public void run() {
+                myView.addView(layout);
+
+            }
+
+        });
+
+        /*
         final RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(200,200);
 
         layoutParams.leftMargin = 50;
@@ -59,6 +74,8 @@ public class AddImage implements Runnable {
 
             pause(5);
         }
+
+        */
 
     }
 
