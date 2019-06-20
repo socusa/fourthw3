@@ -63,7 +63,7 @@ public class MyView extends RelativeLayout {
 
             threads.put(view,myThread);
 
-            myView.addView(view);
+            addView(view);
 
             views[counter] = view;
         }
