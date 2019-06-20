@@ -12,6 +12,7 @@ import androidx.core.content.ContextCompat;
 import java.util.HashMap;
 
 import static com.example.lynn.fourth.MainActivity.*;
+import static com.example.lynn.fourth.MainActivity.context;
 
 public class MyView extends RelativeLayout {
 
@@ -57,7 +58,11 @@ public class MyView extends RelativeLayout {
 
         addView(message);
 
-        add(null);
+        layoutParams = new RelativeLayout.LayoutParams(200,200);
+
+        RelativeLayout layout = new RelativeLayout(context);
+
+        addView(layout);
 
 
 
@@ -66,11 +71,7 @@ public class MyView extends RelativeLayout {
     }
 
     public void add(View view) {
-        RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(200,200);
 
-        RelativeLayout layout = new RelativeLayout(context);
-
-        addView(layout);
     }
 
 }
