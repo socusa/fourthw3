@@ -50,7 +50,7 @@ public class MyView extends RelativeLayout {
 
         LayoutParams layoutParams = new LayoutParams(200,200);
 
-        for (int counter=0;counter<drawables.length;counter++) {
+        for (int counter=0;counter<4;counter++) {
             views[counter] = new ImageView(context);
 
             views[counter].setImageDrawable(getResources().getDrawable(drawables[counter]));
