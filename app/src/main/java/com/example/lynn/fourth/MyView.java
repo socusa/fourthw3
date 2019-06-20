@@ -50,6 +50,8 @@ public class MyView extends RelativeLayout {
 
         message = new TextView(context);
 
+        message.setId(generateViewId());
+
         message.setText("Hello");
 
         LayoutParams layoutParams = new LayoutParams(500,200);
@@ -61,6 +63,8 @@ public class MyView extends RelativeLayout {
         addView(message);
 
         layoutParams = new LayoutParams(200,200);
+
+        layoutParams.addRule(ABOVE,message.getId());
 
         RelativeLayout layout = new RelativeLayout(context);
 
