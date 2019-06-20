@@ -35,7 +35,7 @@ public class AddImage implements Runnable {
 
                     RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams)views[temp].getLayoutParams();
 
-                    layoutParams.leftMargin += 200;
+                    layoutParams.leftMargin += 200*temp;
 
                     views[temp].setLayoutParams(layoutParams);
                 }
