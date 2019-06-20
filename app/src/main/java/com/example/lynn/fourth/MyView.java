@@ -51,19 +51,19 @@ public class MyView extends RelativeLayout {
         LayoutParams layoutParams = new LayoutParams(200,200);
 
         for (int counter=0;counter<drawables.length;counter++) {
-            ImageView view = new ImageView(context);
+            views[counter] = new ImageView(context);
 
-            view.setImageDrawable(getResources().getDrawable(drawables[counter]));
+            views[counter].setImageDrawable(getResources().getDrawable(drawables[counter]));
 
-            view.setLayoutParams(layoutParams);
+            layoutParams.leftMargin = counter*200;
 
-            view.setOnTouchListener(listener);
+            views[counter].setLayoutParams(layoutParams);
 
-            MyThread myThread = new MyThread(view);
+            views[counter].setOnTouchListener(listener);
 
-            threads.put(view,myThread);
+            MyThread myThread = new MyThread(views[counter]);
 
-            views[counter] = view;
+            threads.put(views[counter],myThread);
 
             addView(views[counter]);
         }
