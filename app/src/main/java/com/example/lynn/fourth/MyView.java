@@ -57,6 +57,8 @@ public class MyView extends RelativeLayout {
 
         addView(message);
 
+        add(null);
+
 
 
 
