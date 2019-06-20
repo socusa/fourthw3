@@ -63,11 +63,10 @@ public class MyView extends RelativeLayout {
 
             threads.put(view,myThread);
 
-  //          addView(view);
             views[counter] = view;
-        }
 
-        addView(views[0]);
+            addView(views[counter]);
+        }
 
    //     AddImage addImage = new AddImage();
 
