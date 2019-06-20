@@ -45,7 +45,7 @@ public class AddImage implements Runnable {
 
                     message.setText(drawables[temp]);
 
-                    myView.addView(view);
+                    myView.add(view);
 
 
                 }

@@ -2,6 +2,7 @@ package com.example.lynn.fourth;
 
 import android.content.Context;
 import android.graphics.Point;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -58,6 +59,10 @@ public class MyView extends RelativeLayout {
 
 
 
+    }
+
+    public void add(View view) {
+        addView(view);
     }
 
 }
