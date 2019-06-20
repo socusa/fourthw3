@@ -70,6 +70,8 @@ public class MyView extends RelativeLayout {
 
         layout.setBackgroundColor(0xFF000000);
 
+        layout.setLayoutParams(layoutParams);
+
         addView(layout);
 
 
