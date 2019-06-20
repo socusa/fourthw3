@@ -1,5 +1,6 @@
 package com.example.lynn.fourth;
 
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import static com.example.lynn.fourth.MainActivity.*;
@@ -30,6 +31,9 @@ public class AddImage implements Runnable {
 
                 @Override
                 public void run() {
+                    ImageView view = new ImageView(context);
+
+                    view.setLayoutParams()
 
 
                 }
