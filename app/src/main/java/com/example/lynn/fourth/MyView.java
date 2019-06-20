@@ -50,8 +50,6 @@ public class MyView extends RelativeLayout {
 
         LayoutParams layoutParams = new LayoutParams(200,200);
 
-        layoutParams.leftMargin = -200;
-
         for (int counter=0;counter<drawables.length;counter++) {
             ImageView view = new ImageView(context);
 
