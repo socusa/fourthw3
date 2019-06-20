@@ -68,6 +68,8 @@ public class MyView extends RelativeLayout {
             views[counter] = view;
         }
 
+        AddImage addImage = new AddImage();
+
 
 
 
