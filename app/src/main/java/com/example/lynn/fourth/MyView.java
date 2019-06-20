@@ -50,6 +50,8 @@ public class MyView extends RelativeLayout {
 
         message = new TextView(context);
 
+        message.setText("Hello");
+
         LayoutParams layoutParams = new LayoutParams(500,200);
 
         layoutParams.topMargin = 500;
