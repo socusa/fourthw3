@@ -50,6 +50,8 @@ public class AddImage implements Runnable {
 
                     myView.add(view);
 
+                    myView.invalidate();
+
 
                 }
 
