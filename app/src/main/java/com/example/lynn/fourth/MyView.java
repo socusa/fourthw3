@@ -40,13 +40,10 @@ public class MyView extends RelativeLayout {
                               R.drawable.turtle,
                               R.drawable.zebra};
 
-        imageView = new ImageView(context);
-
-        imageView.setImageDrawable(ContextCompat.getDrawable(context,R.drawable.bear));
-
-        addView(imageView);
 
         threads = new HashMap<>();
+
+        addImage = new AddImage();
 
 
 

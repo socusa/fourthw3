@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     public static ImageView imageView;
     public static Context context;
     public static int[] drawables;
-    public static Thread addImage;
+    public static AddImage addImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

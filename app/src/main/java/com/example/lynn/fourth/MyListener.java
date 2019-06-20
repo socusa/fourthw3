@@ -27,8 +27,12 @@ public class MyListener implements View.OnTouchListener {
         } else if (motionEvent.getAction() == MotionEvent.ACTION_MOVE) {
             layoutParams.leftMargin = (int)(motionEvent.getRawX() - offsetX);
             layoutParams.topMargin = (int)(motionEvent.getRawY() - offsetY);
+
+            source.setLayoutParams(layoutParams);
+        } else if (motionEvent.getAction() == MotionEvent.ACTION_UP) {
+            threads.get(source).start();
         }
-        }
+
 
 
         return (true);
