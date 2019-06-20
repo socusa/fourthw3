@@ -58,11 +58,9 @@ public class MyView extends RelativeLayout {
 
         addView(message);
 
-        layoutParams = new RelativeLayout.LayoutParams(200,200);
+        add(null);
 
-        RelativeLayout layout = new RelativeLayout(context);
 
-        addView(layout);
 
 
 
@@ -71,7 +69,11 @@ public class MyView extends RelativeLayout {
     }
 
     public void add(View view) {
+        LayoutParams layoutParams = new LayoutParams(200,200);
 
+        RelativeLayout layout = new RelativeLayout(context);
+
+        addView(layout);
     }
 
 }
