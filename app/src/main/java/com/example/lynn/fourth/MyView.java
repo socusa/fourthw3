@@ -58,9 +58,13 @@ public class MyView extends RelativeLayout {
 
         addView(message);
 
-        add(null);
+        layoutParams = new LayoutParams(200,200);
 
+        RelativeLayout layout = new RelativeLayout(context);
 
+        layout.setBackgroundColor(0xFF000000);
+
+        addView(layout);
 
 
 
@@ -69,13 +73,7 @@ public class MyView extends RelativeLayout {
     }
 
     public void add(View view) {
-        LayoutParams layoutParams = new LayoutParams(200,200);
 
-        RelativeLayout layout = new RelativeLayout(context);
-
-        layout.setBackgroundColor(0xFF000000);
-
-        addView(layout);
     }
 
 }
