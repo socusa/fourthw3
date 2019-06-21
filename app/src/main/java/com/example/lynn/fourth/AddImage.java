@@ -33,6 +33,8 @@ public class AddImage implements Runnable {
                 @Override
                 public void run() {
                     views[temp].setVisibility(View.VISIBLE);
+
+                    threads.get(views[temp]).start();
                 }
 
             });
