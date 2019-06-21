@@ -36,9 +36,11 @@ public class AddImage implements Runnable {
                 }
 
             });
+
+            pause(5);
         }
 
-        pause(5);
+
 
     }
 
