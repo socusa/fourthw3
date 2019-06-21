@@ -1,5 +1,6 @@
 package com.example.lynn.fourth;
 
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
@@ -24,20 +25,14 @@ public class AddImage implements Runnable {
 
     @Override
     public void run() {
-        for (int counter=0;counter<drawables.length;counter++) {
+        for (int counter=0;counter<10;counter++) {
             final int temp = counter;
 
             myView.post(new Runnable() {
 
                 @Override
                 public void run() {
-                    System.out.println("Hello");
-
-                    RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams)views[temp].getLayoutParams();
-
-                    layoutParams.leftMargin += 200*temp;
-
-                    views[temp].setLayoutParams(layoutParams);
+                    views[temp].setVisibility(View.VISIBLE);
                 }
 
             });

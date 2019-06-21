@@ -68,7 +68,7 @@ public class MyView extends RelativeLayout {
 
         addView(views[0]);
 
-        for (int counter=1;counter<4;counter++) {
+        for (int counter=1;counter<10;counter++) {
             layoutParams = new LayoutParams(200,200);
 
             layoutParams.addRule(RIGHT_OF,views[counter-1].getId());
@@ -76,11 +76,13 @@ public class MyView extends RelativeLayout {
             views[counter].setLayoutParams(layoutParams);
 
             addView(views[counter]);
+
+            views[counter].setVisibility(View.INVISIBLE);
         }
 
 
 
-   //     AddImage addImage = new AddImage();
+        AddImage addImage = new AddImage();
 
 
 
