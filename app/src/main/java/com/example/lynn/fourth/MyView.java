@@ -50,7 +50,7 @@ public class MyView extends RelativeLayout {
 
         LayoutParams layoutParams = new LayoutParams(200,200);
 
-        for (int counter=0;counter<4;counter++) {
+        for (int counter=0;counter<10;counter++) {
             views[counter] = new ImageView(context);
 
             views[counter].setId(generateViewId());
